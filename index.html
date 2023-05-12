@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* font-family: calibri; */
+    }
+
+    nav {
+        width: 100%;
+        height: 80px;
+        background-color: red;
+        color: white;
+    }
+
+    .logo {
+        font-size: 30px;
+        color: aliceblue;
+        margin: 0px 100px;
+        line-height: 80px;
+        cursor: pointer;
+    }
+
+    ul li {
+        display: inline-block;
+
+    }
+
+    ul li a {
+        font-size: 20px;
+        text-decoration: none;
+        line-height: 80px;
+        text-transform: capitalize;
+        padding: 8px 40px;
+        color: white;
+
+    }
+
+
+    nav ul {
+        float: right;
+    }
+
+    ul li a.active:hover{
+        background-color: #8f0815;
+    }
+
+
+
+
+    #checkbtn{
+        float: right;
+        line-height: 80px;
+        margin-right: 10px;
+        font-size: 30px;
+        display: none;
+
+    }
+    #check{
+        display: none;
+    }
+
+
+    #check:checked ~ ul {
+
+        left: 0%;
+    }
+
+/* @media screen  */
+
+@media (max-width:895px) {
+    ul li a.active:hover{
+        background-color: #8f0815;
+    }
+
+   #checkbtn{
+    display: block;
+   }
+   nav ul {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    transition: .5s;
+   }
+
+   nav ul li {
+    display: block;
+    text-align: center;
+ 
+   }
+
+}
+
+
+</style>
+
+<body>
+
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check" id="checkbtn"><i class="fas fa-bars"></i> </label>
+        <label class="logo">JUDO</label>
+
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Gallery</a></li>
+        </ul>
+
+    </nav>
+
+</body>
+
+</html>
